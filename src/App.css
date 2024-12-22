@@ -1,7 +1,17 @@
 .nav-ul li{
   display: inline-block;
   padding: 10px;
-  
+}
+
+.nav-ul {
+  padding: 5px;
+  margin: 0px;
+  background-color: skyblue;
+}
+.nav-ul li a{
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
 }
 
 .App-logo {
