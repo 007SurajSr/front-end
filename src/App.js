@@ -2,6 +2,7 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import SignUp from './components/SignUp';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/logout' element={ <h1> Logout Components </h1>}/> 
         <Route path='/delete' element={ <h1> Delete Components </h1>}/> 
         <Route path='/profile' element={ <h1> Profile Components </h1>}/> 
+        <Route path='/signup' element={<SignUp/>} />
       </Routes>
       
        </BrowserRouter>  
