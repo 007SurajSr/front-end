@@ -25,7 +25,14 @@
   width: 300px;
   border: 1px solid skyblue;
 }
-
+.appButton {
+  margin: 25px;
+  padding: 10px;
+  width: 150px;
+  background-color: skyblue;
+  border: 1px solid;
+  cursor: pointer;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
