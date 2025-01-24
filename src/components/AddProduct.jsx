@@ -7,8 +7,18 @@ const AddProduct = () => {
     const [company, setCompany] = React.useState('');
     const [userID, setUserID] = React.useState('');
 
-    const collectProduct =() => {
+    const collectProduct = async () => {
         console.log(name,price,category,company,userID);
+       
+            const response = await fetch('http://localhost:5000/add-product', {
+                method: 'POST',
+                body: JSON.stringify({name,price,category,company,userID}),
+                headers:{
+                    'Content-Type':'application/json'
+                },
+            });
+            const result = await response.json();
+            console.warn(result);
     }
 
     return(
