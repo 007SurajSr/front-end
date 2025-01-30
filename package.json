@@ -1,4 +1,7 @@
 {
+  "http.proxy": "http://username:password@hostname:port/",
+"http.proxyAuthorization": null,
+"http.proxyStrictSSL": true,
   "name": "front-end",
   "version": "0.1.0",
   "private": true,
