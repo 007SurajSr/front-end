@@ -11,7 +11,7 @@ const AddProduct = () => {
     const [error, setError] = React.useState('false');
 
     const collectProduct = async () => {
-        console.warn(!name  );
+      
         if(!name || !price || !category || !company)
         {
             setError(true);
@@ -50,7 +50,7 @@ const AddProduct = () => {
 
              <input type="text" placeholder="Enter product userID" className="inputBox"
              value={userID} onChange={(e)=>{setUserID(e.target.value)}}/>
-          
+              {error && !userID && <span className="invalid-input"> Enter valid userID</span> }
 
              <button className="appButton" onClick={collectProduct}>Add Product</button>
         </div>
