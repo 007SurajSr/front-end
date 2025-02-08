@@ -13,6 +13,23 @@
   padding: 5px;
   text-decoration: none;
 }
+.nav-ul black{
+  padding: 5px;
+  margin: 0px;
+  background-color: hsl(197, 71%, 73%);
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: hsl(197, 71%, 73%); /* Light grey background */
+  text-align: center;
+  padding: 10px 0; /* Some padding */
+  font-size: 18px; /* Font size */
+}
 
 .register, .product{
   margin-left: 30%;

@@ -13,9 +13,11 @@ const Navbar = () => {
 
     return(
         <div>
+            
             <img alt='logo' 
             className='logo'
             src='https://previews.123rf.com/images/dariachekman/dariachekman1910/dariachekman191000015/132817556-pink-store-icon-shop-icon-flat-design-vector-illustration.jpg'/>
+             
             {auth ? <ul className='nav-ul'>
                 <li><Link to="/">Products</Link></li>
                 <li><Link to="/add">Add Products</Link></li>
@@ -34,8 +36,10 @@ const Navbar = () => {
                 
                 </ul>
                 }
-           
+                
+                 
         </div>
+        
     );
 }
 
