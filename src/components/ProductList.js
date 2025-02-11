@@ -24,7 +24,7 @@ const ProductList =()=>{
         getProducts();
        }};
 
-       const searchHandle = async (e) =>{
+    const searchHandle = async (e) =>{
          console.log();
          let key = e.target.value;
          let result = await fetch(`http://localhost:5000/search/${key}`);
@@ -45,7 +45,7 @@ const ProductList =()=>{
                 <li>Name</li>
                 <li>Price</li>
                 <li>Company</li>
-                <li>Company</li>
+                <li>Category</li>
                 <li>Operation</li>
             </ul>
             {
