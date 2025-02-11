@@ -107,6 +107,14 @@
   margin: 0px;
 }
 
+.search-product{
+  width: 400;
+  margin: 20px;
+  height: 40px;
+  border: 1px solid skyblue;
+  padding-left: 20px;
+}
+
  
 .App-logo {
   height: 40vmin;
