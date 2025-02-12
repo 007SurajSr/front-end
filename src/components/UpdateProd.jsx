@@ -30,14 +30,14 @@ const UpdateProd = () => {
 
     const updateProduct = async () =>{
         console.log(name,price,category, company,userID);
-        let result =  fetch(`http://localhost:5000/product/${params.id}`,{
-            method: 'Put',
+        let result = await fetch(`http://localhost:5000/product/${params.id}`,{
+            method: 'PUT',
             body: JSON.stringify({name,price,company,category,userID}),
             headers: {
-                'Contect-Type':'application/json'
+                'Content-Type':'application/json'
             }
         });
-        result = (await result).json();
+        result = await result.json();
         console.log(result);
         navigate('/')
     } 
