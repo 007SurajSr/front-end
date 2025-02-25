@@ -3,32 +3,38 @@ import { Link } from "react-router-dom";
 
 const ProductList =()=>{
     const [products, setProducts] = useState([]);
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
 
     useEffect(() =>{
         getProducts();
     },[]);
 
     const getProducts = async () =>{
-          let result = await fetch('http://localhost:5000/products');
-          result = await result.json();
-          setProducts(result);
+          const result = await fetch('http://localhost:5000/products');
+          const  result1 = await result.json();
+          setProducts(result1);
     }
-    console.warn('products', products);
+    
 
     const deleteProduct = async(id)=>{
-       let result = await fetch(`http://localhost:5000/delete/${id}`, {
+       const response = await fetch(`http://localhost:5000/delete/${id}`, {
         method: 'Delete'
        });
-       result = await result.json();
-       if(result){
+       var result1 = await response.json();
+       if(result1){
         getProducts();
        }};
 
     const searchHandle = async (e) =>{
-         console.log();
-         let key = e.target.value;
-         let result = await fetch(`http://localhost:5000/search/${key}`);
-         result = await result.json()
+       
+         const key = e.target.value;
+         if(key.length ===0){
+            getProducts();
+            return;
+         }
+         const response = await fetch(`http://localhost:5000/search/${key}`);
+         const  result = await response.json()
          if(result){
             setProducts(result)
          }else{
