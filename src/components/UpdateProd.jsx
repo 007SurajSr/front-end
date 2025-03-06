@@ -19,7 +19,11 @@ const UpdateProd = () => {
 
     const getProductDetails = async() =>{
        
-        let result = await fetch(`http://localhost:5000/update/${params.id}`);
+        let result = await fetch(`http://localhost:5000/update/${params.id}`,{
+            headers : {
+                authorization: `Bearer ${JSON.parse(localStorage.getItem('token'))}`
+               } 
+        });
         result = await result.json();
         setName(result.name);
         setCategory(result.category);
@@ -34,7 +38,9 @@ const UpdateProd = () => {
             method: 'PUT',
             body: JSON.stringify({name,price,company,category,userID}),
             headers: {
-                'Content-Type':'application/json'
+                'Content-Type':'application/json',
+                'authorization' : `Bearer ${JSON.parse(localStorage.getItem('token'))}`
+                   
             }
         });
         result = await result.json();
